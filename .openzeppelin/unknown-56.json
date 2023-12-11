@@ -1,0 +1,227 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x0bD7241fB1F38765917C42E75eB59946fE212634",
+      "txHash": "0xc2631b1ff340b629b1a337e85baf691c62b6a1d1033d6362b6360ebf3e3d8b91",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "45b4820663adc521d1ae02f9b589e186303c38efb073c006161790e260bb21fd": {
+      "address": "0x75A85AaF216bE1A17Eb38037ffBF045D3fbC6C1d",
+      "txHash": "0xeea8035a18ce5d7063be809ab7a0cc8b9b3ee85620db5afabf59c102ce51cea6",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "ERC20Upgradeable",
+            "label": "_balances",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:35"
+          },
+          {
+            "contract": "ERC20Upgradeable",
+            "label": "_allowances",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:37"
+          },
+          {
+            "contract": "ERC20Upgradeable",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:39"
+          },
+          {
+            "contract": "ERC20Upgradeable",
+            "label": "_name",
+            "type": "t_string_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:41"
+          },
+          {
+            "contract": "ERC20Upgradeable",
+            "label": "_symbol",
+            "type": "t_string_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "contract": "ERC20Upgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)45_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:360"
+          },
+          {
+            "contract": "ERC20BurnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\extensions\\ERC20BurnableUpgradeable.sol:50"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "EIP712Upgradeable",
+            "label": "_HASHED_NAME",
+            "type": "t_bytes32",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\cryptography\\draft-EIP712Upgradeable.sol:29"
+          },
+          {
+            "contract": "EIP712Upgradeable",
+            "label": "_HASHED_VERSION",
+            "type": "t_bytes32",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\cryptography\\draft-EIP712Upgradeable.sol:30"
+          },
+          {
+            "contract": "EIP712Upgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\cryptography\\draft-EIP712Upgradeable.sol:111"
+          },
+          {
+            "contract": "ERC165Upgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol:35"
+          },
+          {
+            "contract": "AccessControlUpgradeable",
+            "label": "_roles",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)81_storage)",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:77"
+          },
+          {
+            "contract": "AccessControlUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:259"
+          },
+          {
+            "contract": "ERC20PermitUpgradeable",
+            "label": "_nonces",
+            "type": "t_mapping(t_address,t_struct(Counter)2357_storage)",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\extensions\\draft-ERC20PermitUpgradeable.sol:25"
+          },
+          {
+            "contract": "ERC20PermitUpgradeable",
+            "label": "_PERMIT_TYPEHASH",
+            "type": "t_bytes32",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\extensions\\draft-ERC20PermitUpgradeable.sol:28"
+          },
+          {
+            "contract": "ERC20PermitUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\extensions\\draft-ERC20PermitUpgradeable.sol:93"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:233"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:64"
+          },
+          {
+            "contract": "Blacklist",
+            "label": "_blacklist",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "contracts\\common\\Blacklist.sol:9"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_struct(Counter)2357_storage)": {
+            "label": "mapping(address => struct CountersUpgradeable.Counter)"
+          },
+          "t_struct(Counter)2357_storage": {
+            "label": "struct CountersUpgradeable.Counter",
+            "members": [
+              {
+                "label": "_value",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)81_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)"
+          },
+          "t_struct(RoleData)81_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]"
+          }
+        }
+      }
+    }
+  }
+}
