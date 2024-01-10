@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.4;
+pragma solidity 0.8.2;
 
-import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20BurnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/draft-ERC20PermitUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import { Blacklist } from "./common/Blacklist.sol";
 
 contract PHPToken is
@@ -22,8 +20,6 @@ contract PHPToken is
 {
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
-
-    uint256 public constant MAX_ADDRESSES = 100; // Address limit 
 
     function initialize() external initializer {
         __ERC20_init("PHPToken", "PHPT");
@@ -46,24 +42,6 @@ contract PHPToken is
 
     function unpause() external onlyRole(PAUSER_ROLE) {
         _unpause();
-    }
-
-    event BlacklistUpdated(address[] accounts, bool added);
-
-    function addBlacklist(address[] memory accounts) external onlyRole(BLACKLIST_ADMIN_ROLE) {
-        require(accounts.length <= MAX_ADDRESSES, "Exceeds maximum address limit");
-        for (uint256 i = 0; i < accounts.length; i++) {
-            _addBlacklist(accounts[i]);
-        }
-        emit BlacklistUpdated(accounts, true);
-    }
-
-    function removeBlacklist(address[] memory accounts) external onlyRole(BLACKLIST_ADMIN_ROLE) {
-        require(accounts.length <= MAX_ADDRESSES, "Exceeds maximum address limit");
-        for (uint256 i = 0; i < accounts.length; i++) {
-            _removeBlacklist(accounts[i]);
-        }
-        emit BlacklistUpdated(accounts, false);
     }
 
     function mint(address to, uint256 amount) external onlyRole(MINTER_ROLE) {
