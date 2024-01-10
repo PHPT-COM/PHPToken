@@ -25,7 +25,7 @@ contract PHPToken is
 
     uint256 public constant MAX_ADDRESSES = 100; // Address limit 
 
-    function initialize() public initializer {
+    function initialize() external initializer {
         __ERC20_init("PHPToken", "PHPT");
         __ERC20Burnable_init();
         __Pausable_init();
