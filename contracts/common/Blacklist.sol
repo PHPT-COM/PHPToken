@@ -10,8 +10,10 @@ abstract contract Blacklist is ERC20Upgradeable, AccessControlUpgradeable {
     mapping(address => bool) private _blacklist;
 
     event BlacklistAdded(address indexed account);
+    event BlacklistAdded(address[] accounts);
 
     event BlacklistRemoved(address indexed account);
+    event BlacklistRemoved(address[] accounts);
 
     function isBlacklist(address account) public view returns (bool) {
         return _blacklist[account];
@@ -22,6 +24,7 @@ abstract contract Blacklist is ERC20Upgradeable, AccessControlUpgradeable {
         for (uint256 i = 0; i < accounts.length; i++) {
             _addBlacklist(accounts[i]);
         }
+         emit BlacklistAdded(accounts);
     }
 
     function removeBlacklist(address[] memory accounts) external onlyRole(BLACKLIST_ADMIN_ROLE) {
@@ -29,6 +32,7 @@ abstract contract Blacklist is ERC20Upgradeable, AccessControlUpgradeable {
         for (uint256 i = 0; i < accounts.length; i++) {
             _removeBlacklist(accounts[i]);
         }
+        emit BlacklistRemoved(accounts);
     }
 
     function _addBlacklist(address account) internal {
